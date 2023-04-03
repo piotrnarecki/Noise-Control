@@ -22,8 +22,15 @@ class RecorderViewController: UIViewController {
     @IBOutlet weak var goBackButton: UIButton!
     
     
+
     
     var isRecording: Bool = false
+    
+    var soundRecorder: SoundRecorder = SoundRecorder()
+    
+    var dbValue: Float = 0.0
+    
+    
     
     override func viewDidLoad() {
         
@@ -48,10 +55,12 @@ class RecorderViewController: UIViewController {
             recordButton.tintColor=UIColor.red
             recordButton.setTitle("stop", for: .normal)
             
+            
         }else{
             isRecording=false
             recordButton.tintColor=UIColor.blue
             recordButton.setTitle("record", for: .normal)
+            stopRecording()
         }
         
         
@@ -66,18 +75,25 @@ class RecorderViewController: UIViewController {
     
     
     
-    func recordSound(){
+    private func recordSound(){
         
+        dbValue = soundRecorder.recordSound()
+    
+//        let refreshingTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(refreshGeneratorUI), userInfo: nil, repeats: true)
         
+    }
+    
+    private func stopRecording(){
+        
+        soundRecorder.stopRecording()
         
     }
     
     
     
-    
-    
-    
-    
+    func refreshGeneratorUI(dbValue:Float) {
+            valueLabel.text = String(dbValue)
+        }
     
     /*
     // MARK: - Navigation

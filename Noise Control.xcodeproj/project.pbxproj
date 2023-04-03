@@ -15,6 +15,8 @@
 		54B11BCA29C4F34900ED4F9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B11BC829C4F34900ED4F9C /* LaunchScreen.storyboard */; };
 		54BBCD4A29DB3F8800FBDDB3 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBCD4929DB3F8800FBDDB3 /* GeneratorViewController.swift */; };
 		54BBCD4C29DB400400FBDDB3 /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBCD4B29DB400400FBDDB3 /* RecorderViewController.swift */; };
+		54BBCD4F29DB4D6100FBDDB3 /* SoundGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBCD4E29DB4D6100FBDDB3 /* SoundGenerator.swift */; };
+		54BBCD5129DB4E9400FBDDB3 /* SoundRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBCD5029DB4E9400FBDDB3 /* SoundRecorder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		54B11BCB29C4F34900ED4F9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54BBCD4929DB3F8800FBDDB3 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
 		54BBCD4B29DB400400FBDDB3 /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
+		54BBCD4E29DB4D6100FBDDB3 /* SoundGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundGenerator.swift; sourceTree = "<group>"; };
+		54BBCD5029DB4E9400FBDDB3 /* SoundRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecorder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,10 +64,11 @@
 		54B11BBC29C4F34700ED4F9C /* Noise Control */ = {
 			isa = PBXGroup;
 			children = (
+				54BBCD5229DB4ECF00FBDDB3 /* Models */,
 				54BBCD4D29DB402000FBDDB3 /* Controllers */,
 				54B11BBD29C4F34700ED4F9C /* AppDelegate.swift */,
 				54B11BBF29C4F34700ED4F9C /* SceneDelegate.swift */,
-				54B11BC329C4F34700ED4F9C /* Main.storyboard */,
+				54BBCD5329DB4EDF00FBDDB3 /* Views */,
 				54B11BC629C4F34900ED4F9C /* Assets.xcassets */,
 				54B11BC829C4F34900ED4F9C /* LaunchScreen.storyboard */,
 				54B11BCB29C4F34900ED4F9C /* Info.plist */,
@@ -79,6 +84,23 @@
 				54BBCD4B29DB400400FBDDB3 /* RecorderViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		54BBCD5229DB4ECF00FBDDB3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				54BBCD5029DB4E9400FBDDB3 /* SoundRecorder.swift */,
+				54BBCD4E29DB4D6100FBDDB3 /* SoundGenerator.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		54BBCD5329DB4EDF00FBDDB3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				54B11BC329C4F34700ED4F9C /* Main.storyboard */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,7 +177,9 @@
 				54B11BC229C4F34700ED4F9C /* MainViewController.swift in Sources */,
 				54B11BBE29C4F34700ED4F9C /* AppDelegate.swift in Sources */,
 				54BBCD4A29DB3F8800FBDDB3 /* GeneratorViewController.swift in Sources */,
+				54BBCD4F29DB4D6100FBDDB3 /* SoundGenerator.swift in Sources */,
 				54BBCD4C29DB400400FBDDB3 /* RecorderViewController.swift in Sources */,
+				54BBCD5129DB4E9400FBDDB3 /* SoundRecorder.swift in Sources */,
 				54B11BC029C4F34700ED4F9C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

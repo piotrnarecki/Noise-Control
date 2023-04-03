@@ -1,43 +1,206 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Noise_Control" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="Noise_Control" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noise Control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvA-FG-7hf">
-                                <rect key="frame" x="119" y="430" width="176" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="aw4-Xk-L22">
+                                <rect key="frame" x="119" y="297" width="176" height="244"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Noise Control" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvA-FG-7hf">
+                                        <rect key="frame" x="0.0" y="0.0" width="176" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LEH-ST-uDF">
+                                        <rect key="frame" x="14" y="90" width="148.5" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="generator">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="generatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oPs-ZL-K5x"/>
+                                            <segue destination="SuJ-VP-Vky" kind="presentation" identifier="goToGenerator" id="rUS-mn-ldm"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="naw-5j-dTD">
+                                        <rect key="frame" x="22" y="194" width="132" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="recorder">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="recorderPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Klg-gl-7Xw"/>
+                                            <segue destination="B7c-ri-VbL" kind="presentation" identifier="goToRecorder" id="UEa-2Y-5mu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vvA-FG-7hf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="386" id="Xgd-WY-Wkj"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vvA-FG-7hf" secondAttribute="trailing" constant="119" id="Y6b-or-0JM"/>
-                            <constraint firstItem="vvA-FG-7hf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="bEq-Mq-efS"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="vvA-FG-7hf" secondAttribute="bottom" constant="396" id="oXa-nA-Wxf"/>
+                            <constraint firstItem="aw4-Xk-L22" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Swf-yw-RaR"/>
+                            <constraint firstItem="aw4-Xk-L22" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hp6-Iu-fUG"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="brT-4Z-VID"/>
+                    <connections>
+                        <outlet property="generatorButton" destination="LEH-ST-uDF" id="cor-9y-udS"/>
+                        <outlet property="mainLabel" destination="vvA-FG-7hf" id="6es-yp-pGi"/>
+                        <outlet property="recorderButton" destination="naw-5j-dTD" id="Bxb-6V-eTB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="66"/>
+            <point key="canvasLocation" x="-1649" y="-354"/>
+        </scene>
+        <!--Recorder View Controller-->
+        <scene sceneID="a7b-Kk-iqT">
+            <objects>
+                <viewController storyboardIdentifier="RecorderViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="B7c-ri-VbL" customClass="RecorderViewController" customModule="Noise_Control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NuJ-xu-Yyp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="n1L-J6-835">
+                                <rect key="frame" x="143.5" y="299" width="127" height="240"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recorder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSO-bq-eOf">
+                                        <rect key="frame" x="0.0" y="0.0" width="127" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8R-9M-Rtl">
+                                        <rect key="frame" x="0.0" y="69" width="127" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OF-EL-4cZ">
+                                        <rect key="frame" x="0.0" y="122.5" width="127" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="record"/>
+                                        <connections>
+                                            <action selector="recordButtonPressed:" destination="B7c-ri-VbL" eventType="touchUpInside" id="iEV-jp-8lF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zu-hP-fIw">
+                                        <rect key="frame" x="0.0" y="190" width="127" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="go back">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goBackPressed:" destination="B7c-ri-VbL" eventType="touchUpInside" id="Qpo-Dr-cKq"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="goBackR" id="D47-if-NJR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Bqt-32-JGF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="n1L-J6-835" firstAttribute="centerX" secondItem="NuJ-xu-Yyp" secondAttribute="centerX" id="Ul3-ua-yDg"/>
+                            <constraint firstItem="n1L-J6-835" firstAttribute="centerY" secondItem="NuJ-xu-Yyp" secondAttribute="centerY" id="vrf-XI-4Cb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="5a6-cs-9vm"/>
+                    <connections>
+                        <outlet property="goBackButton" destination="0Zu-hP-fIw" id="ryh-mu-UUK"/>
+                        <outlet property="recordButton" destination="3OF-EL-4cZ" id="hoW-EN-d0s"/>
+                        <outlet property="recorderLabel" destination="vSO-bq-eOf" id="Gtq-1g-0J1"/>
+                        <outlet property="valueLabel" destination="e8R-9M-Rtl" id="cTq-Kb-YpB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1d-OP-wak" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1029" y="-171"/>
+        </scene>
+        <!--Generator View Controller-->
+        <scene sceneID="nW5-a9-8Qd">
+            <objects>
+                <viewController restorationIdentifier="GeneratorViewController" storyboardIdentifier="GeneratorViewController" id="SuJ-VP-Vky" customClass="GeneratorViewController" customModule="Noise_Control" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xVC-2E-9Jw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="Zel-Om-6a1">
+                                <rect key="frame" x="16.5" y="294.5" width="381.5" height="249.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPT-sN-lYn">
+                                        <rect key="frame" x="0.0" y="0.0" width="381.5" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" toolTip="choose frequency" value="100" minValue="0.0" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="Fna-XT-HIP">
+                                        <rect key="frame" x="-2" y="69" width="385.5" height="31"/>
+                                        <connections>
+                                            <action selector="frequencySliderChanged:" destination="SuJ-VP-Vky" eventType="valueChanged" id="030-6Y-v99"/>
+                                        </connections>
+                                    </slider>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWH-e6-9b6">
+                                        <rect key="frame" x="0.0" y="132" width="381.5" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="generate"/>
+                                        <connections>
+                                            <action selector="generatePressed:" destination="SuJ-VP-Vky" eventType="touchUpInside" id="wsL-w7-bzH"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMM-rg-K4B">
+                                        <rect key="frame" x="0.0" y="199.5" width="381.5" height="50"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="go back">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="goBackPressed:" destination="SuJ-VP-Vky" eventType="touchUpInside" id="b5e-bP-wD4"/>
+                                            <segue destination="BYZ-38-t0r" kind="presentation" identifier="goBackG" id="VSS-Yx-UvL"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xCW-s9-fRv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Zel-Om-6a1" firstAttribute="centerX" secondItem="xVC-2E-9Jw" secondAttribute="centerX" id="ZoJ-B7-7Fq"/>
+                            <constraint firstItem="Zel-Om-6a1" firstAttribute="centerY" secondItem="xVC-2E-9Jw" secondAttribute="centerY" id="oyy-6M-l41"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Elr-Bc-e1j"/>
+                    <connections>
+                        <outlet property="frequencySlider" destination="Fna-XT-HIP" id="9OJ-jG-oYD"/>
+                        <outlet property="generateButton" destination="MWH-e6-9b6" id="cki-aJ-2tL"/>
+                        <outlet property="generatorLabel" destination="FPT-sN-lYn" id="IhA-m4-LiJ"/>
+                        <outlet property="goBackButton" destination="QMM-rg-K4B" id="N6x-73-7ax"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5dG-rd-alI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="-844"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="D47-if-NJR"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

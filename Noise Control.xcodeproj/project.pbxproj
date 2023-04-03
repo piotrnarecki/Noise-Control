@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		54B11BBE29C4F34700ED4F9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B11BBD29C4F34700ED4F9C /* AppDelegate.swift */; };
 		54B11BC029C4F34700ED4F9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B11BBF29C4F34700ED4F9C /* SceneDelegate.swift */; };
-		54B11BC229C4F34700ED4F9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B11BC129C4F34700ED4F9C /* ViewController.swift */; };
+		54B11BC229C4F34700ED4F9C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B11BC129C4F34700ED4F9C /* MainViewController.swift */; };
 		54B11BC529C4F34700ED4F9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B11BC329C4F34700ED4F9C /* Main.storyboard */; };
 		54B11BC729C4F34900ED4F9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54B11BC629C4F34900ED4F9C /* Assets.xcassets */; };
 		54B11BCA29C4F34900ED4F9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 54B11BC829C4F34900ED4F9C /* LaunchScreen.storyboard */; };
+		54BBCD4A29DB3F8800FBDDB3 /* GeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBCD4929DB3F8800FBDDB3 /* GeneratorViewController.swift */; };
+		54BBCD4C29DB400400FBDDB3 /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBCD4B29DB400400FBDDB3 /* RecorderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		54B11BBA29C4F34700ED4F9C /* Noise Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Noise Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B11BBD29C4F34700ED4F9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54B11BBF29C4F34700ED4F9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		54B11BC129C4F34700ED4F9C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		54B11BC129C4F34700ED4F9C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		54B11BC429C4F34700ED4F9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		54B11BC629C4F34900ED4F9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		54B11BC929C4F34900ED4F9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		54B11BCB29C4F34900ED4F9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		54BBCD4929DB3F8800FBDDB3 /* GeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratorViewController.swift; sourceTree = "<group>"; };
+		54BBCD4B29DB400400FBDDB3 /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,25 @@
 		54B11BBC29C4F34700ED4F9C /* Noise Control */ = {
 			isa = PBXGroup;
 			children = (
+				54BBCD4D29DB402000FBDDB3 /* Controllers */,
 				54B11BBD29C4F34700ED4F9C /* AppDelegate.swift */,
 				54B11BBF29C4F34700ED4F9C /* SceneDelegate.swift */,
-				54B11BC129C4F34700ED4F9C /* ViewController.swift */,
 				54B11BC329C4F34700ED4F9C /* Main.storyboard */,
 				54B11BC629C4F34900ED4F9C /* Assets.xcassets */,
 				54B11BC829C4F34900ED4F9C /* LaunchScreen.storyboard */,
 				54B11BCB29C4F34900ED4F9C /* Info.plist */,
 			);
 			path = "Noise Control";
+			sourceTree = "<group>";
+		};
+		54BBCD4D29DB402000FBDDB3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				54B11BC129C4F34700ED4F9C /* MainViewController.swift */,
+				54BBCD4929DB3F8800FBDDB3 /* GeneratorViewController.swift */,
+				54BBCD4B29DB400400FBDDB3 /* RecorderViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +152,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				54B11BC229C4F34700ED4F9C /* ViewController.swift in Sources */,
+				54B11BC229C4F34700ED4F9C /* MainViewController.swift in Sources */,
 				54B11BBE29C4F34700ED4F9C /* AppDelegate.swift in Sources */,
+				54BBCD4A29DB3F8800FBDDB3 /* GeneratorViewController.swift in Sources */,
+				54BBCD4C29DB400400FBDDB3 /* RecorderViewController.swift in Sources */,
 				54B11BC029C4F34700ED4F9C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

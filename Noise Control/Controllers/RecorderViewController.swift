@@ -22,13 +22,26 @@ class RecorderViewController: UIViewController {
     @IBOutlet weak var goBackButton: UIButton!
     
     
+    @IBOutlet weak var playButton: UIButton!
+    
+    
+    
 
     
     var isRecording: Bool = false
     
     var soundRecorder: SoundRecorder = SoundRecorder()
     
-    var dbValue: Float = 0.0
+   // var dbValue: Float = 0.0
+    
+    
+    var isPlaying: Bool = false
+    
+    var soundPlayer: SoundPlayer = SoundPlayer()
+    
+    var recordedFileExists: Bool = false
+    
+    
     
     
     
@@ -38,10 +51,9 @@ class RecorderViewController: UIViewController {
         super.viewDidLoad()
         
         
-        isRecording=false
+        isRecording = false
+        isPlaying = false
         
-
-        // Do any additional setup after loading the view.
     }
     
 
@@ -69,6 +81,35 @@ class RecorderViewController: UIViewController {
     }
     
     
+    
+    @IBAction func playButtonPressed(_ sender: UIButton) {
+        
+        if(!isPlaying){
+            
+        isPlaying=true
+            
+           playSound()
+            
+            
+            playButton.tintColor=UIColor.red
+            playButton.setTitle("stop", for: .normal)
+            
+            
+        }else{
+            isPlaying=false
+            
+            
+            playButton.tintColor=UIColor.blue
+            playButton.setTitle("play", for: .normal)
+            
+            
+            stopPlaying()
+        }
+        
+        
+    }
+    
+    
     @IBAction func goBackPressed(_ sender: UIButton) {
     }
     
@@ -77,9 +118,8 @@ class RecorderViewController: UIViewController {
     
     private func recordSound(){
         
-        dbValue = soundRecorder.recordSound()
-    
-//        let refreshingTimer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(refreshGeneratorUI), userInfo: nil, repeats: true)
+        soundRecorder.recordSound()
+
         
     }
     
@@ -91,18 +131,21 @@ class RecorderViewController: UIViewController {
     
     
     
-    func refreshGeneratorUI(dbValue:Float) {
-            valueLabel.text = String(dbValue)
-        }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func playSound(){
+        
+        soundPlayer.playSound()
+        
     }
-    */
+    
+    
+    
+    private func stopPlaying(){
+        
+        soundPlayer.stopPlaying()
+    }
+    
+    
+    
+
 
 }

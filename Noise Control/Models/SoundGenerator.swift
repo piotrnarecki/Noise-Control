@@ -199,7 +199,7 @@ class SoundGenerator: NSObject {
         
         if iterator < myFrequencyArray.count {
             let freq = myFrequencyArray[iterator]
-//            generateSingleFrequency(frequency:freq)
+            //generateSingleFrequency(frequency:freq)
             generateFourFrequency(freq1: freq*1, freq2: freq+550, freq3: freq-300, freq4: freq*4+60)
 
             
@@ -238,6 +238,9 @@ class SoundGenerator: NSObject {
         
         
     }
+    
+    
+   
     
     
     

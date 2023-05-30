@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		549175FD2A267C2B0022E858 /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 549175FC2A267C2B0022E858 /* SoundPlayer.swift */; };
 		54B11BBE29C4F34700ED4F9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B11BBD29C4F34700ED4F9C /* AppDelegate.swift */; };
 		54B11BC029C4F34700ED4F9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B11BBF29C4F34700ED4F9C /* SceneDelegate.swift */; };
 		54B11BC229C4F34700ED4F9C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B11BC129C4F34700ED4F9C /* MainViewController.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		549175FC2A267C2B0022E858 /* SoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
 		54B11BBA29C4F34700ED4F9C /* Noise Control.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Noise Control.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		54B11BBD29C4F34700ED4F9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		54B11BBF29C4F34700ED4F9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 			children = (
 				54BBCD5029DB4E9400FBDDB3 /* SoundRecorder.swift */,
 				54BBCD4E29DB4D6100FBDDB3 /* SoundGenerator.swift */,
+				549175FC2A267C2B0022E858 /* SoundPlayer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			files = (
 				54B11BC229C4F34700ED4F9C /* MainViewController.swift in Sources */,
 				54B11BBE29C4F34700ED4F9C /* AppDelegate.swift in Sources */,
+				549175FD2A267C2B0022E858 /* SoundPlayer.swift in Sources */,
 				54BBCD4A29DB3F8800FBDDB3 /* GeneratorViewController.swift in Sources */,
 				54BBCD4F29DB4D6100FBDDB3 /* SoundGenerator.swift in Sources */,
 				54BBCD4C29DB400400FBDDB3 /* RecorderViewController.swift in Sources */,

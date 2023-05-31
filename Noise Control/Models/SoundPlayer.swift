@@ -23,19 +23,12 @@ class SoundPlayer: NSObject {
          
          let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
          let audioFilename = documentPath.appendingPathComponent("recording.m4a")
-         
-        
-         
-
-         print ("AUDIO FILENAME PLAYER \(audioFilename)")
 
 
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: audioFilename)
             audioPlayer?.play()
             
-            print("playing started")
-
             
         } catch {
             print("couldn't load file :(")

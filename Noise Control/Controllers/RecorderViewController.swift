@@ -137,7 +137,7 @@ class RecorderViewController: UIViewController {
         
     }
     
-    
+
     
     private func stopPlaying(){
         

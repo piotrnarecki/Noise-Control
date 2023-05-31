@@ -10,34 +10,27 @@ import AVKit
 import AVFoundation
 
 class SoundRecorder{
-
+    
+    var audioRecorder: AVAudioRecorder?
     
     func recordSound(){
-               
         
-        //starts recording sound
         
-    
         setUpAudioCapture()
-        captureAudio()
+        startRecording()
         
-        print("recording started")
-
     }
     
     func stopRecording(){
         
-    
-
-        print("recording stopped")
         
+        audioRecorder?.stop()
         
-        //return recorded file
         
     }
     
     
- //https://betterprogramming.pub/detecting-microphone-input-levels-in-your-ios-application-e5b96bf97c5c
+    //https://betterprogramming.pub/detecting-microphone-input-levels-in-your-ios-application-e5b96bf97c5c
     
     private func setUpAudioCapture() {
         
@@ -51,21 +44,17 @@ class SoundRecorder{
                 guard result else { return }
             })
             
-            captureAudio()
+            // captureAudio()
             
         } catch {
             print("ERROR: Failed to set up recording session.")
         }
     }
     
-    private func captureAudio() {
+    private func startRecording() {
         
         let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         let audioFilename = documentPath.appendingPathComponent("recording.m4a")
-        
-        
-        print ("AUDIO FILENAME RECORDER \(audioFilename)")
-        
         
         
         let settings = [
@@ -74,14 +63,14 @@ class SoundRecorder{
             AVNumberOfChannelsKey: 1,
             AVEncoderAudioQualityKey: AVAudioQuality.high.rawValue
         ]
-        
-        // ...
-        
+                
         do {
-            let audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
-            audioRecorder.record()
-            audioRecorder.isMeteringEnabled = true
-    
+            audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
+            audioRecorder?.record()
+            audioRecorder?.isMeteringEnabled = true
+            
+            
+            
         } catch {
             print("ERROR: Failed to start recording process.")
         }

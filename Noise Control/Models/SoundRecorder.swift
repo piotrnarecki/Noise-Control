@@ -54,7 +54,7 @@ class SoundRecorder{
     private func startRecording() {
         
         let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-        let audioFilename = documentPath.appendingPathComponent("recording.m4a")
+        let audioFilename = documentPath.appendingPathComponent("original.m4a")
         
         
         let settings = [

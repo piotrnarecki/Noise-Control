@@ -16,15 +16,32 @@ class SoundPlayer: NSObject {
 
     var audioPlayer: AVAudioPlayer?
 
+    var isProcessed: Bool?
     
     
-     func playSound(){
+    
+    func playSound(isProcessed: Bool){
         
          
          let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
-         let audioFilename = documentPath.appendingPathComponent("recording.m4a")
+        
+        
+        var audioFilename = documentPath.appendingPathComponent("")
 
 
+        
+        
+        if(isProcessed){
+             audioFilename = documentPath.appendingPathComponent("original.m4a")
+
+        }else{
+             audioFilename = documentPath.appendingPathComponent("original.m4a")
+        }
+        
+        
+        
+        
+        
         do {
             audioPlayer = try AVAudioPlayer(contentsOf: audioFilename)
             audioPlayer?.play()

@@ -14,12 +14,26 @@ class RecorderConductor: NSObject {
     var timeInterval: Int = 1000 //co ile rejestrowac [ms]
     
     
+    //sound recording
+    var soundRecorder: SoundRecorder = SoundRecorder()
+
+    
+    //sound playing
+    var soundPlayer: SoundPlayer = SoundPlayer()
+
+    
+    
+    
+    
     
     func startConductingRecording(){
+        
         
         if(!isRunning){
             
             
+            isRunning=true
+            soundRecorder.recordSound()
             
             
         }
@@ -30,8 +44,9 @@ class RecorderConductor: NSObject {
         
         if(isRunning){
             
-            
-            
+            isRunning=false
+            soundRecorder.stopRecording()
+
             
         }
         
@@ -41,9 +56,14 @@ class RecorderConductor: NSObject {
     
     func atomicStep(){
         
-    // 1 record
+    //record
+        soundRecorder.recordSound()
+        //wait
+        soundRecorder.stopRecording()
     // 2 play
-        
+        soundPlayer.playSound(isProcessed: false)
+        //wait
+        soundPlayer.stopPlaying()
         
     }
     

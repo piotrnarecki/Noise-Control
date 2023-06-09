@@ -25,6 +25,7 @@ class RecorderViewController: UIViewController {
     @IBOutlet weak var playButton: UIButton!
     
     
+    @IBOutlet weak var processSwitch: UISwitch!
     
 
     
@@ -41,6 +42,15 @@ class RecorderViewController: UIViewController {
     
     var recordedFileExists: Bool = false
     
+    
+    ///sound conductor
+    var recorderConductor: RecorderConductor = RecorderConductor()
+    
+    
+    ///processing
+    
+    var isProcessed: Bool = false
+
     
     
     
@@ -88,7 +98,7 @@ class RecorderViewController: UIViewController {
             
         isPlaying=true
             
-           playSound()
+            playSound(isProcessed:isProcessed)
             
             
             playButton.tintColor=UIColor.red
@@ -119,6 +129,9 @@ class RecorderViewController: UIViewController {
     private func recordSound(){
         
         soundRecorder.recordSound()
+        
+        
+        ///recorderConductor.startConductingRecording()
 
         
     }
@@ -126,14 +139,15 @@ class RecorderViewController: UIViewController {
     private func stopRecording(){
         
         soundRecorder.stopRecording()
+        ///recorderConductor.stopConductingRecording()
         
     }
     
     
     
-    private func playSound(){
+    private func playSound(isProcessed:Bool){
         
-        soundPlayer.playSound()
+        soundPlayer.playSound(isProcessed:isProcessed)
         
     }
     
@@ -146,6 +160,18 @@ class RecorderViewController: UIViewController {
     
     
     
-
+    @IBAction func processSwitchChanged(_ sender: UISwitch) {
+        
+        isProcessed=sender.isOn
+        
+       print("PROCESSED: \(isProcessed)")
+        
+        if(isProcessed){
+            valueLabel.text = "Processor ON"
+        }else{
+            valueLabel.text = "Processor OFF"
+        }
+    }
+    
 
 }

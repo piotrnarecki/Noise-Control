@@ -78,22 +78,28 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="n1L-J6-835">
-                                <rect key="frame" x="143" y="265.5" width="128.5" height="307.5"/>
+                                <rect key="frame" x="148.5" y="223.5" width="117.5" height="391.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recorder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vSO-bq-eOf">
-                                        <rect key="frame" x="0.0" y="0.0" width="128.5" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="117.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8R-9M-Rtl">
-                                        <rect key="frame" x="0.0" y="69" width="128.5" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="69" width="117.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" toolTip="process ?" on="YES" title="process ?" translatesAutoresizingMaskIntoConstraints="NO" id="LEU-fl-8c7">
+                                        <rect key="frame" x="0.0" y="122.5" width="119.5" height="31"/>
+                                        <connections>
+                                            <action selector="processSwitchChanged:" destination="B7c-ri-VbL" eventType="valueChanged" id="bk0-Iy-Tub"/>
+                                        </connections>
+                                    </switch>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3OF-EL-4cZ">
-                                        <rect key="frame" x="0.0" y="122.5" width="128.5" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="186.5" width="117.5" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="record"/>
                                         <connections>
@@ -101,7 +107,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Zu-hP-fIw">
-                                        <rect key="frame" x="0.0" y="190" width="128.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="254" width="117.5" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="go back">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
@@ -112,7 +118,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lPz-CJ-umK">
-                                        <rect key="frame" x="0.0" y="273" width="128.5" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="337" width="117.5" height="54.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="play recorded"/>
                                         <connections>
@@ -134,6 +140,7 @@
                     <connections>
                         <outlet property="goBackButton" destination="0Zu-hP-fIw" id="ryh-mu-UUK"/>
                         <outlet property="playButton" destination="lPz-CJ-umK" id="Taf-CG-eD9"/>
+                        <outlet property="processSwitch" destination="LEU-fl-8c7" id="e4e-gI-rtY"/>
                         <outlet property="recordButton" destination="3OF-EL-4cZ" id="hoW-EN-d0s"/>
                         <outlet property="recorderLabel" destination="vSO-bq-eOf" id="Gtq-1g-0J1"/>
                         <outlet property="valueLabel" destination="e8R-9M-Rtl" id="cTq-Kb-YpB"/>
@@ -152,22 +159,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="Zel-Om-6a1">
-                                <rect key="frame" x="14.5" y="294.5" width="385.5" height="249.5"/>
+                                <rect key="frame" x="8.5" y="294.5" width="397" height="249.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Generator" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FPT-sN-lYn">
-                                        <rect key="frame" x="0.0" y="0.0" width="385.5" height="36"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="397" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <slider toolTip="choose frequency" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" value="100" minValue="0.0" maxValue="2000" translatesAutoresizingMaskIntoConstraints="NO" id="Fna-XT-HIP">
-                                        <rect key="frame" x="-2" y="69" width="389.5" height="31"/>
+                                        <rect key="frame" x="-2" y="69" width="401" height="31"/>
                                         <connections>
                                             <action selector="frequencySliderChanged:" destination="SuJ-VP-Vky" eventType="valueChanged" id="030-6Y-v99"/>
                                         </connections>
                                     </slider>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWH-e6-9b6">
-                                        <rect key="frame" x="0.0" y="132" width="385.5" height="34.5"/>
+                                        <rect key="frame" x="0.0" y="132" width="397" height="34.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="generate"/>
                                         <connections>
@@ -175,7 +182,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QMM-rg-K4B">
-                                        <rect key="frame" x="0.0" y="199.5" width="385.5" height="50"/>
+                                        <rect key="frame" x="0.0" y="199.5" width="397" height="50"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="go back">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="30"/>

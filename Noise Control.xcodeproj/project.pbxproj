@@ -19,6 +19,7 @@
 		54BBCD4C29DB400400FBDDB3 /* RecorderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBCD4B29DB400400FBDDB3 /* RecorderViewController.swift */; };
 		54BBCD4F29DB4D6100FBDDB3 /* SoundGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBCD4E29DB4D6100FBDDB3 /* SoundGenerator.swift */; };
 		54BBCD5129DB4E9400FBDDB3 /* SoundRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54BBCD5029DB4E9400FBDDB3 /* SoundRecorder.swift */; };
+		54CDD2E62A338AB900D5BB30 /* SoundProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54CDD2E52A338AB900D5BB30 /* SoundProcessor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		54BBCD4B29DB400400FBDDB3 /* RecorderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecorderViewController.swift; sourceTree = "<group>"; };
 		54BBCD4E29DB4D6100FBDDB3 /* SoundGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundGenerator.swift; sourceTree = "<group>"; };
 		54BBCD5029DB4E9400FBDDB3 /* SoundRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundRecorder.swift; sourceTree = "<group>"; };
+		54CDD2E52A338AB900D5BB30 /* SoundProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundProcessor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 				54BBCD4E29DB4D6100FBDDB3 /* SoundGenerator.swift */,
 				549175FC2A267C2B0022E858 /* SoundPlayer.swift */,
 				542DFD8B2A27A8070045B625 /* RecorderConductor.swift */,
+				54CDD2E52A338AB900D5BB30 /* SoundProcessor.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 				54BBCD4F29DB4D6100FBDDB3 /* SoundGenerator.swift in Sources */,
 				54BBCD4C29DB400400FBDDB3 /* RecorderViewController.swift in Sources */,
 				54BBCD5129DB4E9400FBDDB3 /* SoundRecorder.swift in Sources */,
+				54CDD2E62A338AB900D5BB30 /* SoundProcessor.swift in Sources */,
 				54B11BC029C4F34700ED4F9C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

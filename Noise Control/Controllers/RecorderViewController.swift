@@ -64,6 +64,9 @@ class RecorderViewController: UIViewController {
         isRecording = false
         isPlaying = false
         
+        
+        isProcessed = processSwitch.isOn
+        
     }
     
 

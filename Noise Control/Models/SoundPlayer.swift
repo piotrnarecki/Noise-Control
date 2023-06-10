@@ -14,9 +14,13 @@ import AVFoundation
 class SoundPlayer: NSObject {
     
 
-    var audioPlayer: AVAudioPlayer?
+    var audioPlayer1: AVAudioPlayer?
+    var audioPlayer2: AVAudioPlayer?
+
 
     var isProcessed: Bool?
+    
+    var soundProcessor: SoundProcessor?
     
     
     
@@ -26,30 +30,60 @@ class SoundPlayer: NSObject {
          let documentPath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
         
         
-        var audioFilename = documentPath.appendingPathComponent("")
+        let  audioFilename1 = documentPath.appendingPathComponent("original.m4a")
 
+        let audioFilename2 = documentPath.appendingPathComponent("processed.m4a")
 
+        
         
         
         if(isProcessed){
-             audioFilename = documentPath.appendingPathComponent("original.m4a")
+            soundProcessor=SoundProcessor()
+            soundProcessor?.processSound()
+            
+            do {
+                audioPlayer1 = try AVAudioPlayer(contentsOf: audioFilename1)
+                audioPlayer2 = try AVAudioPlayer(contentsOf: audioFilename2)
 
+                audioPlayer1?.play()
+                audioPlayer2?.play()
+
+                
+                
+            } catch {
+                print("couldn't load file :(")
+            }
+            
+            print("PROCESSING")
+            
+            
+            
         }else{
-             audioFilename = documentPath.appendingPathComponent("original.m4a")
+            print("NO PROCESSIING")
+
+            do {
+                audioPlayer1 = try AVAudioPlayer(contentsOf: audioFilename1)
+                audioPlayer1?.play()
+                
+                
+            } catch {
+                print("couldn't load file :(")
+            }
+            
         }
         
         
         
         
         
-        do {
-            audioPlayer = try AVAudioPlayer(contentsOf: audioFilename)
-            audioPlayer?.play()
-            
-            
-        } catch {
-            print("couldn't load file :(")
-        }
+//        do {
+//            audioPlayer1 = try AVAudioPlayer(contentsOf: audioFilename1)
+//            audioPlayer1?.play()
+//
+//
+//        } catch {
+//            print("couldn't load file :(")
+//        }
         
     }
     
@@ -57,7 +91,10 @@ class SoundPlayer: NSObject {
      func stopPlaying(){
         
         
-        audioPlayer?.stop()
+        audioPlayer1?.stop()
+         audioPlayer2?.stop()
+         
+         
         
          print("playing stopped")
 

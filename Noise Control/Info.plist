@@ -21,7 +21,14 @@
 			</array>
 		</dict>
 	</dict>
-	<key>NSMicrophoneUsageDescription</key>
-	<string>Enable microphone access for sound level details</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+		<string>bluetooth-central</string>
+		<string>bluetooth-peripheral</string>
+		<string>external-accessory</string>
+		<string>fetch</string>
+		<string>processing</string>
+	</array>
 </dict>
 </plist>

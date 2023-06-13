@@ -342,6 +342,7 @@
 				DEVELOPMENT_TEAM = BG48KWWWC8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Noise Control/Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Enable microphone access for sound level details";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -370,6 +371,7 @@
 				DEVELOPMENT_TEAM = BG48KWWWC8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Noise Control/Info.plist";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Enable microphone access for sound level details";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
